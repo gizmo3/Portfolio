@@ -25,8 +25,8 @@
 
 .light-mode{
   --color--primary: #FFFFFF;
-  --color--secondary: rgb(255, 49, 73); 
-  --color--lilybackground: rgb(245,224,206);
+  --color--secondary: rgb(49, 213, 249); 
+  --color--lilybackground: rgb(170,221,214);
   --color--white: #2a2e35;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -36,7 +36,30 @@
   --color-grey-4: #454e56;
   --color-grey-5: #f6f6f6;
   --color-grey-6: #12181b;
+  .header-content{
+    .left-header{
+      .image{
+        .my-lily2{
+          display: block;
+        }
+        .my-lily{
+          display: none;
+        }
+      }
+    }
+  }
 }
+
+.header-content{
+  .left-header{
+    .image{
+      .my-lily2{
+        display: none;
+      }
+    }
+  }
+}
+
 
 body{
   background-color: var(--color--primary);
@@ -192,12 +215,11 @@ section{
     align-items: center;
     position: relative;
     transition: all .4s ease-in-out;
-    filter: grayscale(100);
+    filter: grayscale(0.75);
     &:hover{
       filter: grayscale(0);
     }
     .h-shape{
-        transition: all .4s ease-in-out;
         width: 100%;
         height: 100%;
         background-color: var(--color--lilybackground);
@@ -255,7 +277,7 @@ section{
       color: var(--color-grey-1);
     }
     h4{
-      font-size: 2rem;
+      font-size: 1.65rem;
       text-transform: uppercase;
     }
   }
