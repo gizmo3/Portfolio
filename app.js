@@ -42,4 +42,20 @@ function PageTransitions(){
   })
 }
 
+
+fetch("https://api.coingecko.com/api/v3/simple/price?ids=solana%2Cethereum%2Cbonk&vs_currencies=aud&include_24hr_change=true", {
+  method: "GET",
+  headers: {}
+})
+  .then((response) => response.json())
+  .then((data) => {
+    document.getElementById('sol').innerHTML = data.solana.aud
+    document.getElementById('eth').innerHTML = data.ethereum.aud
+    document.getElementById('bonk').innerHTML = data.bonk.aud
+
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
 PageTransitions();
